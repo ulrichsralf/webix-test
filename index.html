@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" href="https://cdn.webix.com/edge/webix.css" type="text/css">
-	<script src="https://cdn.webix.com/edge/webix.js" type="text/javascript"></script>
 
 	<!-- Webix Library -->
-<!--	<script type="text/javascript" src="./node_modules/@xbs/webix-pro/webix.js"></script>-->
-<!--	<link rel="stylesheet" type="text/css" href="./node_modules/@xbs/webix-pro/webix.css">-->
+	<script type="text/javascript" src="./node_modules/@xbs/webix-pro/webix.js"></script>
+	<script type="text/javascript" src="./node_modules/@xbs/filemanager/codebase/filemanager.js"></script>
+	<link rel="stylesheet" type="text/css" href="./node_modules/@xbs/webix-pro/webix.css">
+	<link rel="stylesheet" type="text/css" href="./node_modules/@xbs/filemanager/codebase/filemanager.css">
 
 	<!-- App -->
 	<script type="text/javascript" src="codebase/app.js"></script>
@@ -21,7 +21,10 @@
 			if (webix.CustomScroll)
 				webix.CustomScroll.init();
 
-			const app = new ladonfileshare.App();
+
+			var app = new fileManager.App({
+				url: "https://docs.webix.com/filemanager-backend/"
+			});
 			app.render(document.body);
 		});
 	</script>
