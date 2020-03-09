@@ -3,12 +3,19 @@ import {JetView, plugins} from "webix-jet";
 export default class TopView extends JetView {
     config() {
 
+        const photo = {
+            template: "<image class=\"mainphoto\" style=\"height:100%\" src=\"https://ladon.org/img/LADON_FINAL_WEB.png\"/>",
+            height: 90,
+            width: 200,
+            borderless: true
+        };
+
         const header = {
             view: "toolbar",
-            css: "webix_dark", padding: {left: 8},
+            padding: 0,
             elements: [
-                {view: "label", label: this.app.config.name}
-                /*wjet::Topbar*/
+                photo,
+                // {view: "label", label: this.app.config.name}
             ]
         };
 
@@ -17,26 +24,23 @@ export default class TopView extends JetView {
             width: 180, layout: "y", select: true,
             template: "<span class='webix_icon #icon#'></span> #value# ",
             data: [
-                {value: "DashBoard", id: "start", icon: "wxi-plus-square"},
-                {value: "Data", id: "data", icon: "wxi-columns"},
-                {value: "Settings", id: "settings", icon: "wxi-pencil"},
-                {value: "share", id: "share", icon: "wxi-file"},
+                {value: "Neue Freigabe", id: "share", icon: "wxi-folder-open"},
+                {value: "Freigegeben", id: "manageshared", icon: "wxi-pencil"},
                 /*wjet::Menu*/
             ]
         };
 
         const ui = {
-            rows: [
-                header,
-                {
-                    type: "space", cols: [
-                        menu,
-                        {$subview: true}
-
-                    ]
-                }
+            rows: [{
+                cols: [{
+                    type: "space", rows: [header, menu]
+                },
+                {$subview: true}
+                ]
+            }
             ]
-        };
+        }
+        ;
 
         return ui;
     }

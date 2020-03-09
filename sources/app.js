@@ -1,3 +1,4 @@
+import {plugins} from "webix-jet";
 import "./styles/app.css";
 import {JetApp} from "webix-jet";
 
@@ -7,12 +8,11 @@ export default class App extends JetApp {
             id: APPNAME,
             version: VERSION,
             debug: !PRODUCTION,
-            start: "/top/start"
+            start: "/top/share"
         };
 
         super({...defaults, ...config});
-
-        /*wjet::plugin*/
+/*wjet::plugin*/
     }
 }
 

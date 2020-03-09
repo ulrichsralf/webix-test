@@ -3,12 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-
+	<script>
+		webix_skin = "flat";
+	</script>
 	<!-- Webix Library -->
 	<script type="text/javascript" src="./node_modules/@xbs/webix-pro/webix.js"></script>
 	<script type="text/javascript" src="./node_modules/@xbs/filemanager/codebase/filemanager.js"></script>
+
+
+
 	<link rel="stylesheet" type="text/css" href="./node_modules/@xbs/webix-pro/webix.css">
+<!--	<link rel="stylesheet" type="text/css" href="./node_modules/@xbs/webix-pro/skins/flat.css">-->
 	<link rel="stylesheet" type="text/css" href="./node_modules/@xbs/filemanager/codebase/filemanager.css">
+
 
 	<!-- App -->
 	<script type="text/javascript" src="codebase/app.js"></script>
@@ -21,10 +28,7 @@
 			if (webix.CustomScroll)
 				webix.CustomScroll.init();
 
-
-			var app = new fileManager.App({
-				url: "https://docs.webix.com/filemanager-backend/"
-			});
+			const app = new ladonfileshare.App();
 			app.render(document.body);
 		});
 	</script>
