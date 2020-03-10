@@ -9,7 +9,6 @@ export default class MyView extends JetView {
             "//cdn.webix.com/pro/edge/filemanager/filemanager.css": true
         }).then(() => {
 
-
             return {
                 rows: [
                     {
@@ -23,31 +22,6 @@ export default class MyView extends JetView {
                                         "label": "L A D O N | Freigabebereich",
                                         "height": 0,
                                         "width": 0
-                                    },
-                                    {
-                                        "view": "button",
-                                        "type": "icon",
-                                        "icon": "mdi mdi-backspace",
-                                        "height": 0,
-                                        "width": 175,
-                                        "label": "Zurücksetzen"
-                                    },
-                                    {
-                                        "view": "template",
-                                        "role": "placeholder",
-                                        "borderless": 1,
-                                        "width": 10
-                                    },
-                                    {
-                                        "label": "Freigeben",
-                                        "view": "button",
-                                        "type": "icon",
-                                        "icon": "mdi mdi-share",
-                                        "height": 0,
-                                        "width": 175,
-                                        "click": function () {
-                                            this.$scope.show("manageshared");
-                                        }
                                     },
                                     {
                                         "view": "template",
@@ -67,7 +41,8 @@ export default class MyView extends JetView {
                             }
                         ],
                         "height": 60
-                    }, {
+                    },
+                    {
                         cols: [
                             {
                                 view: "filemanager",
@@ -78,42 +53,74 @@ export default class MyView extends JetView {
                             },
                             {
                                 rows: [
-
+                                    {
+                                        "view": "template",
+/* "template": "Hier kannst Du per Drag-and-Drop die Auswahl der Dateien zusammenstellen, die Du freigeben möchtest.", */
+                                        "role": "placeholder",
+                                        "height": 57
+                                    },
+                                    {
+                                        "view": "toolbar",
+                                        "height": 57,
+                                        "cols": [
+                                            {
+                                                "view": "button",
+                                                "type": "icon",
+                                                "icon": "mdi mdi-backspace",
+                                                "height": 0,
+                                                "width": 175,
+                                                "label": "Zurücksetzen"
+                                            },
+                                            {
+                                                "view": "template",
+                                                "role": "placeholder",
+                                                "borderless": 1,
+                                                "width": 0
+                                            },
+                                            {
+                                                "label": "Freigeben",
+                                                "view": "button",
+                                                "type": "icon",
+                                                "icon": "mdi mdi-share",
+                                                "height": 0,
+                                                "width": 175,
+                                                "click": function () {
+                                                    this.$scope.show("manageshared");
+                                                }
+                                            }
+                                        ]
+                                    },
                                     {
                                         "view": "datatable",
                                         "id": "shareform",
                                         drag: true,
                                         minHeight: 380,
                                         select: "row", columns: [
-
                                             {
                                                 id: "name",
                                                 template: "#id#",
-                                                header: "Auswahl",
+                                                header: "Dateiname",
                                                 fillspace: true,
                                                 sort: "string"
                                             },
-                                            {
+/*                                          {
                                                 header: "Größe",
                                                 template: "#size#",
                                                 sort: "number",
                                                 fillspace: false,
                                                 adjust: "data"
-                                            },
+                                            },*/
                                             {
-                                                header: "Datum",
+                                                header: "Erstellt am",
                                                 template: "#date#",
                                                 sort: "date",
-                                                width: 200,
+                                                "width": 180,
                                                 fillspace: false,
                                                 adjust: "data"
                                             }
-
                                         ]
                                     }
-
                                 ]
-
                             }
                         ]
                     }
