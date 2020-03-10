@@ -20,15 +20,15 @@ export default class StartView extends JetView {
                                     "width": 0
                                 },
                                 {
-                                    "label": "Verzeichnis",
+                                    "label": "Hauptverzeichnis",
                                     "value": "1",
                                     "data": buckets,
                                     "view": "combo",
                                     "height": 0,
                                     "editable": true,
                                     "id": 1582064501683,
-                                    "width": 285,
-                                    "labelWidth": 75
+                                    "width": 275,
+                                    "labelWidth": 125
                                 }
                             ]
                         }
@@ -44,8 +44,8 @@ export default class StartView extends JetView {
 
                         {"id": "name", "header": "Freigabename", "fillspace": true, "sort": "string", "hidden": false},
                         {
-                            "id": "gueltigBis",
-                            "header": "Gültig bis",
+                            "id": "aktivBis",
+                            "header": "Aktiv bis",
                             "sort": "date",
                             "fillspace": false,
                             "hidden": false,
@@ -97,7 +97,7 @@ export default class StartView extends JetView {
                                 label: "Aktiv"
                             },
                             {
-                                name: "gueltigBis",
+                                name: "aktivBis",
                                 view: "datepicker",
                                 left: 200,
                                 top: 90,
@@ -110,40 +110,42 @@ export default class StartView extends JetView {
                                 disabled: true,
                                 left: 20,
                                 top: 190,
-                                width: 420,
+                                width: 460,
                                 name: "link"
                             },
                             {
                                 name: "passwort",
-                                label: "Password",
+                                label: "Passwort",
                                 disabled: true,
                                 view: "text",
                                 left: 20,
                                 top: 140,
-                                width: 420
+                                width: 460
                             },
                             {
-                                label: "Copy",
-                                type: "form",
                                 view: "button",
-                                left: 450,
+                                type: "icon",
+                                icon: "mdi mdi-content-copy",
+                                left: 490,
                                 top: 140,
-                                width: 100
+                                width: 60
                             },
                             {
-                                label: "Copy",
-                                type: "form",
                                 view: "button",
-                                left: 450,
+                                type: "icon",
+                                icon: "mdi mdi-content-copy",
+                                left: 490,
                                 top: 190,
-                                width: 100
+                                width: 60
                             },
                             {
                                 view: "button",
-                                type: "form",
+                                type: "icon",
+                                icon: "mdi mdi-folder-remove",
                                 left: 20,
                                 top: 240,
-                                width: 100,
+                                height: 50,
+                                width: 140,
                                 label: "Löschen",
 
                             }

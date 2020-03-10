@@ -24,8 +24,8 @@ export default class TopView extends JetView {
             width: 180, layout: "y", select: true,
             template: "<span class='webix_icon #icon#'></span> #value# ",
             data: [
-                {value: "Neue Freigabe", id: "share", icon: "wxi-folder-open"},
-                {value: "Freigegeben", id: "manageshared", icon: "wxi-pencil"},
+                {value: "Neue Freigabe", id: "share", icon: "mdi mdi-folder-plus"},
+                {value: "Freigegeben", id: "manageshared", icon: "mdi mdi-folder-move"},
                 /*wjet::Menu*/
             ]
         };

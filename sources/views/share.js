@@ -24,31 +24,44 @@ export default class MyView extends JetView {
                                         "height": 0,
                                         "width": 0
                                     },
-
                                     {
                                         "view": "button",
+                                        "type": "icon",
+                                        "icon": "mdi mdi-backspace",
                                         "height": 0,
-                                        "width": 150,
+                                        "width": 175,
                                         "label": "Zurücksetzen"
                                     },
                                     {
-                                        "label": "Speichern",
+                                        "view": "template",
+                                        "role": "placeholder",
+                                        "borderless": 1,
+                                        "width": 10
+                                    },
+                                    {
+                                        "label": "Freigeben",
                                         "view": "button",
+                                        "type": "icon",
+                                        "icon": "mdi mdi-share",
                                         "height": 0,
-                                        "width": 150,
+                                        "width": 175,
                                         "click": function () {
                                             this.$scope.show("manageshared");
                                         }
-
-                                    }
-                                    ,
+                                    },
                                     {
-                                        "label": "Verzeichnis",
+                                        "view": "template",
+                                        "role": "placeholder",
+                                        "borderless": 1,
+                                        "width": 40
+                                    },
+                                    {
+                                        "label": "Hauptverzeichnis",
                                         "data": buckets,
                                         "view": "combo",
                                         "editable": true,
-                                        "width": 285,
-                                        "labelWidth": 100,
+                                        "width": 275,
+                                        "labelWidth": 125
                                     }
                                 ]
                             }
