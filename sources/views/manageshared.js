@@ -107,15 +107,6 @@ export default class StartView extends JetView {
                                 format:"%d %M %Y"
                             },
                             {
-                                label: "Link",
-                                view: "text",
-                                disabled: true,
-                                left: 20,
-                                top: 190,
-                                width: 460,
-                                name: "link"
-                            },
-                            {
                                 name: "passwort",
                                 label: "Passwort",
                                 disabled: true,
@@ -133,6 +124,15 @@ export default class StartView extends JetView {
                                 width: 60
                             },
                             {
+                                label: "Link",
+                                view: "text",
+                                disabled: true,
+                                left: 20,
+                                top: 190,
+                                width: 460,
+                                name: "link"
+                            },
+                            {
                                 view: "button",
                                 type: "icon",
                                 icon: "mdi mdi-content-copy",
@@ -141,21 +141,34 @@ export default class StartView extends JetView {
                                 width: 60
                             },
                             {
-                                view: "button",
-                                type: "icon",
-                                icon: "mdi mdi-folder-remove",
-                                left: 20,
+                                "borderless": 1,
                                 top: 240,
-                                height: 50,
-                                width: 140,
-                                label: "Löschen",
-
-                            }
-                        ]
+                                "height": 50,
+                                "cols": [
+                                    {
+                                        "view": "button",
+                                        "type": "icon",
+                                        "icon": "mdi mdi-folder-remove",
+                                        "left": 20,
+                                        "width": 140,
+                                        "label": "Löschen"
+                                    },
+                                    {
+                                        "view": "template",
+                                        "role": "placeholder",
+                                        "borderless": 1,
+                                        "width": 272
+                                    },
+                                    {
+                                        "view": "button",
+                                        "type": "icon",
+                                        "icon": "mdi mdi-content-save",
+                                        "width": 140,
+                                        "label": "Speichern"
+                                    }]
+                            }]
                     }]
-                },
-
-            ],
+                }],
             "id": 1582064501674
         };
     }
