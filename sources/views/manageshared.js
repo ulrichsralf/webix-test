@@ -102,7 +102,9 @@ export default class StartView extends JetView {
                                 left: 200,
                                 top: 90,
                                 width: 350,
-                                label: "bis"
+                                label: "bis",
+                                stringResult:true,
+                                format:"%d %M %Y"
                             },
                             {
                                 label: "Link",
