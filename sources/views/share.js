@@ -103,13 +103,6 @@ export default class MyView extends JetView {
                                                 fillspace: true,
                                                 sort: "string"
                                             },
-                                            /*                                          {
-                                                                                            header: "Größe",
-                                                                                            template: "#size#",
-                                                                                            sort: "number",
-                                                                                            fillspace: false,
-                                                                                            adjust: "data"
-                                                                                        },*/
                                             {
                                                 header: "Erstellt am",
                                                 template: "#date#",
@@ -131,19 +124,19 @@ export default class MyView extends JetView {
         });
     }
 
-    init(view) {
-        // const file = {
-        //     value: "pixeljuice.pdf",
-        //     date: new Date(),
-        //     size: 7231,
-        //     id: "/pixeljuice.pdf",
-        //     type: "document"
-        // };
-        // var fm = this.$$("fm");
-        // fm.attachEvent("onChange", function () {
-        //     console.log("state " + JSON.stringify(fm.getState()));
-        // });
-        // fm.getService("operations").open(file);
-        // this.$$("$template7").hide();
-    }
+// init(view) {
+    // const file = {
+    //     value: "pixeljuice.pdf",
+    //     date: new Date(),
+    //     size: 7231,
+    //     id: "/pixeljuice.pdf",
+    //     type: "document"
+    // };
+    // var fm = this.$$("fm");
+    // fm.attachEvent("onChange", function () {
+    //     console.log("state " + JSON.stringify(fm.getState()));
+    // });
+    // fm.getService("operations").open(file);
+    // this.$$("$template7").hide();
+// }
 }

@@ -21,15 +21,20 @@
 	<script type="text/javascript" src="codebase/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="codebase/app.css">
 
+<!--
+	&lt;!&ndash; Skin &ndash;&gt;
+	<script src="../codebase/webix.js"></script>
+	<link href="../codebase/skins/flat.css" rel="stylesheet" type="text/css">
+-->
 	<script type="text/javascript">
 		webix.ready(function(){
-			webix.debug({events: true});
+//			webix.debug({events: true});
 			webix.debug({size: true});
 			if (webix.CustomScroll)
 				webix.CustomScroll.init();
 
 			const app = new ladonfileshare.App();
-			app.render(document.body);
+			app.render(document.body).then(value => webix.$$("$button3").hide());
 		});
 	</script>
 </head>
