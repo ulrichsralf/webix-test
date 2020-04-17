@@ -1,5 +1,4 @@
 import {JetView} from "webix-jet";
-import {buckets} from "../models/buckets";
 
 export default class MyView extends JetView {
     config() {
@@ -31,7 +30,8 @@ export default class MyView extends JetView {
                                     },
                                     {
                                         "label": "Hauptverzeichnis",
-                                        "data": buckets,
+                                        "value": "34569754",
+                                        "options": ["34569754", "12345678", "54633546"],
                                         "view": "combo",
                                         "editable": true,
                                         "width": 275,
@@ -47,7 +47,7 @@ export default class MyView extends JetView {
                             {
                                 view: "filemanager",
                                 id: "fm",
-                                url: "https://docs.webix.com/filemanager-backend/"
+                                url: "http://dev.mind-consulting.de:3200/"
                                 // url: "http://localhost:8081/",
                                 // override: new Map([[fileManager.services.Backend, CustomBackend]]),
                             },
